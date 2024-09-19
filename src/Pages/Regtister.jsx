@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
+import axios from 'axios'
 const Regtister = () => {
     const {
         register,
@@ -7,7 +8,12 @@ const Regtister = () => {
         formState: { errors },
     } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => {
+        console.log(data)
+        axios.post('http://localhost:5000/registerUser', data)
+        .then((res)=> console.log(res.data))
+        .then((err)=> console.log(err))
+    }
     return (
         <>
             <div className='container mx-auto px-[10px]'>

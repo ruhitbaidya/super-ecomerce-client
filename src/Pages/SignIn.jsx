@@ -1,13 +1,21 @@
-import React from 'react'
+
+import axios from "axios"
 import { useForm } from "react-hook-form"
+
 const SignIn = () => {
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => {
+      console.log(data)
+      axios.post('http://localhost:5000/login', data)
+      .then((res)=> console.log(res))
+      .catch((err)=> console.log(err))
+    }
   return (
     <>
       <div className='container mx-auto px-[10px]'>
@@ -15,6 +23,7 @@ const SignIn = () => {
             <div className='p-[40px] border w-[60%] rounded-lg'>
                 <h2 className='text-2xl font-[600] text-center'>Login Here</h2>
                 <p className='text-center mt-[10px]'>Login And Explore More</p>
+
             <form onSubmit={handleSubmit(onSubmit)} className='mt-[20px]'>
                 <div>
                     <label htmlFor="email">Enter Your Email</label>
