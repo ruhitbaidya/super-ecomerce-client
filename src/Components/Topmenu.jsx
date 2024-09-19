@@ -1,0 +1,25 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const Topmenu = () => {
+  return (
+    <>
+      <div>
+        <div className='container mx-auto px-[10px]'>
+            <div className='py-[10px]'>
+                <ul className='flex justify-end items-center gap-[25px] text-white'>
+                    <li><NavLink>Home</NavLink></li>
+                    <li><NavLink>About</NavLink></li>
+                    <li><NavLink>Contact</NavLink></li>
+                    <li><NavLink>Help</NavLink></li>
+                    <li><NavLink>Login</NavLink></li>
+                    <li><NavLink>SignUp</NavLink></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Topmenu
