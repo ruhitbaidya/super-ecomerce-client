@@ -18,7 +18,7 @@ const Regtister = () => {
         <>
             <div className='container mx-auto px-[10px]'>
                 <div className='w-[80%] mx-auto mt-[20px]'>
-                    <div className='border p-[30px] rounded-lg'>
+                    <div className='border border-green-400 p-[30px] rounded-lg'>
                         <h2 className='text-3xl text-center font-[700]'>Register</h2>
                         <p className='text-center mt-[10px]'>Please fill the following form with your personal information</p>
                         <form onSubmit={handleSubmit(onSubmit)}>

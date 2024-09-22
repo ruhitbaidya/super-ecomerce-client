@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "iPhone 14 Pro",
+      "description": "Apple's latest iPhone with A16 Bionic chip and ProMotion display.",
+      "price": 999,
+      "rating": 4.8,
+      "category": "smartphones",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSofMdyI73nWGF7qKF-LaMykTyXQOgbYfO4Bg&s"
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S22",
+      "description": "High-performance Android smartphone with stunning camera quality.",
+      "price": 899,
+      "rating": 4.7,
+      "category": "smartphones",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlZn98OtbHSPc-rDss87H1ktYuNcSZmvMWqQ&s"
+    },
+    {
+      "id": 3,
+      "title": "MacBook Air M2",
+      "description": "The new MacBook Air with M2 chip for unparalleled performance.",
+      "price": 1199,
+      "rating": 4.9,
+      "category": "laptops",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaAy_gUqnhreS0IszvnJeovEcYs_2_ID48_w&s"
+    },
+    {
+      "id": 4,
+      "title": "Dell XPS 13",
+      "description": "Compact and powerful laptop with Intel 12th Gen processor.",
+      "price": 999,
+      "rating": 4.6,
+      "category": "laptops",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSANQ2jPiChfay5AICmpWvjeEYonTfx1kT_fg&s"
+    },
+    {
+      "id": 5,
+      "title": "Sony WH-1000XM5",
+      "description": "Industry-leading noise-canceling headphones with up to 30 hours of battery life.",
+      "price": 399,
+      "rating": 4.8,
+      "category": "electronics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKzwlvTMIu8AKBuBnXaJ7m2Q_UitiYzfJBw&s"
+    },
+    {
+      "id": 6,
+      "title": "Apple Watch Series 8",
+      "description": "Apple's newest smartwatch with advanced health monitoring features.",
+      "price": 499,
+      "rating": 4.5,
+      "category": "electronics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5-zTtNWlP9WK-O3hyxquPDdWBw-pZDwUWCw&s"
+    }
+  ]
+  

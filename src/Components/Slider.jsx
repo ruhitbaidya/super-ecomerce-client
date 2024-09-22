@@ -39,7 +39,7 @@ const Slider = () => {
                            <div className='text-center space-y-4'>
                            <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
                             <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
-                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                            <button className='py-[8px] px-[30px] border border-green-400 hover:bg-white hover:text-black'>Buy Now</button>
                            </div>
                            </div>
                         </div>
@@ -53,7 +53,7 @@ const Slider = () => {
                            <div className='text-center space-y-4'>
                            <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
                             <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
-                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                            <button className='py-[8px] px-[30px] border border-green-400 hover:bg-white hover:text-black'>Buy Now</button>
                            </div>
                            </div>
                         </div>
@@ -67,7 +67,7 @@ const Slider = () => {
                            <div className='text-center space-y-4'>
                            <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
                             <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
-                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                            <button className='py-[8px] px-[30px] border border-green-400 hover:bg-white hover:text-black'>Buy Now</button>
                            </div>
                            </div>
                         </div>
@@ -81,7 +81,7 @@ const Slider = () => {
                            <div className='text-center space-y-4'>
                            <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
                             <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
-                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                            <button className='py-[8px] px-[30px] border border-green-400 hover:bg-white hover:text-black'>Buy Now</button>
                            </div>
                            </div>
                         </div>
@@ -95,7 +95,7 @@ const Slider = () => {
                            <div className='text-center space-y-4'>
                            <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
                             <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
-                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                            <button className='py-[8px] px-[30px] border border-green-400 hover:bg-white hover:text-black'>Buy Now</button>
                            </div>
                            </div>
                         </div>

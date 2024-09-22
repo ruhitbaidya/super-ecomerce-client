@@ -12,8 +12,8 @@ const Topmenu = () => {
                     <li><NavLink>About</NavLink></li>
                     <li><NavLink>Contact</NavLink></li>
                     <li><NavLink>Help</NavLink></li>
-                    <li><NavLink>Login</NavLink></li>
-                    <li><NavLink>SignUp</NavLink></li>
+                    <li><NavLink to='/signin'>Login</NavLink></li>
+                    <li><NavLink to="/register">SignUp</NavLink></li>
                 </ul>
             </div>
         </div>

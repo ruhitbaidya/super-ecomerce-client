@@ -19,8 +19,8 @@ const SignIn = () => {
   return (
     <>
       <div className='container mx-auto px-[10px]'>
-        <div className='h-screen flex justify-center items-center'>
-            <div className='p-[40px] border w-[60%] rounded-lg'>
+        <div className=' flex justify-center items-center'>
+            <div className='p-[40px] border border-green-400 w-[60%] rounded-lg'>
                 <h2 className='text-2xl font-[600] text-center'>Login Here</h2>
                 <p className='text-center mt-[10px]'>Login And Explore More</p>
 
