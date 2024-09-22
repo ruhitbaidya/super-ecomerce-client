@@ -4,10 +4,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import image1 from '../assets/1.jpg'
+import image2 from '../assets/2.jpg'
+import image3 from '../assets/3.jpg'
+import image4 from '../assets/4.jpg'
+import image5 from '../assets/5.jpg'
+import './common.css'
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 const Slider = () => {
     return (
-        <div>
+        <div className='rounded-lg'>
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
                 pagination={{
@@ -25,15 +31,76 @@ const Slider = () => {
 
                 className="mySwiper"
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+                <SwiperSlide>
+                    <div className='h-[400px] w-full relative'>
+                        <img className='object-contain' src={image1} alt="" />
+                        <div className=' text-white z-30 absolute top-0  h-full w-full bg-custom'>
+                           <div className='w-full h-full flex justify-center items-center'>
+                           <div className='text-center space-y-4'>
+                           <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
+                            <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
+                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='h-[400px] w-full relative'>
+                        <img className='object-contain' src={image2} alt="" />
+                        <div className=' text-white z-30 absolute top-0  h-full w-full bg-custom'>
+                           <div className='w-full h-full flex justify-center items-center'>
+                           <div className='text-center space-y-4'>
+                           <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
+                            <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
+                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='h-[400px] w-full relative'>
+                        <img className='object-contain' src={image3} alt="" />
+                        <div className=' text-white z-30 absolute top-0  h-full w-full bg-custom'>
+                           <div className='w-full h-full flex justify-center items-center'>
+                           <div className='text-center space-y-4'>
+                           <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
+                            <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
+                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='h-[400px] w-full relative'>
+                        <img className='object-contain' src={image4} alt="" />
+                        <div className=' text-white z-30 absolute top-0  h-full w-full bg-custom'>
+                           <div className='w-full h-full flex justify-center items-center'>
+                           <div className='text-center space-y-4'>
+                           <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
+                            <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
+                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='h-[400px] w-full relative'>
+                        <img className='object-contain' src={image5} alt="" />
+                        <div className=' text-white z-30 absolute top-0  h-full w-full bg-custom'>
+                           <div className='w-full h-full flex justify-center items-center'>
+                           <div className='text-center space-y-4'>
+                           <h2 className='text-3xl font-[600]'>Mobile Shop For Our Smart Cutomer</h2>
+                            <p>This Mobile Only For This People people are smart and our regular customer and he/she bye 5000+ shipping in our market</p>
+                            <button className='py-[8px] px-[30px] border hover:bg-white hover:text-black'>Buy Now</button>
+                           </div>
+                           </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
     )
