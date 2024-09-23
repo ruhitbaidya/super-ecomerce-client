@@ -24,7 +24,7 @@ const Product = () => {
                                 <p className='flex items-center gap-[10px]'><FaStar className='text-yellow-500' />({item.rating})</p>
                             </div>
                             <div className='text-right mt-[10px]'>
-                                <button className='border border-green-400 px-[25px] py-[8px]'>Buy Now</button>
+                                <button className='border border-green-400 px-[25px] py-[8px] rounded-lg'>Buy Now</button>
                             </div>
                         </div>
                     })
