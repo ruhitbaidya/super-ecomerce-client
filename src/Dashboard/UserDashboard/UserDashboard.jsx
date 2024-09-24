@@ -1,6 +1,7 @@
 // UserDashboard
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Icons for the hamburger menu
+import { Link } from "react-router-dom";
 
 const UserDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -8,6 +9,8 @@ const UserDashboard = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  let roole = 'admin';
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -36,20 +39,22 @@ const UserDashboard = () => {
           <nav>
             <ul>
               <li className="mb-4">
-                <a href="/" className="block p-3 rounded hover:bg-blue-700">
+                <Link to="/" className="block p-3 rounded hover:bg-blue-700">
                   Home
-                </a>
+                </Link>
               </li>
-              <li className="mb-4">
-                <a href="/analytics" className="block p-3 rounded hover:bg-blue-700">
-                  Analytics
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="/settings" className="block p-3 rounded hover:bg-blue-700">
-                  Settings
-                </a>
-              </li>
+              {
+                roole === 'admin' ? <>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/admin/controlallproduct'>Control Product</Link></li>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700"  to='/admin/roolecheker'>Role Checker</Link></li>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/admin/productaprove'>Product Aproved</Link></li>
+                </> : <></>
+              }
+              {
+                roole === 'user' ? <>
+                
+                </> : <></>
+              }
             </ul>
           </nav>
         </aside>

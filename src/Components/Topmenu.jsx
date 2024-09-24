@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Topmenu = () => {
+  let rooleChecker = 'admin';
   return (
     <>
       <div>
@@ -11,7 +12,7 @@ const Topmenu = () => {
                     <li><NavLink>Home</NavLink></li>
                     <li><NavLink>About</NavLink></li>
                     <li><NavLink>Contact</NavLink></li>
-                    <li><NavLink to='/user/dashboard'>Dashboard</NavLink></li>
+                    <li><NavLink to={`/${rooleChecker}/dashboard`}>Dashboard</NavLink></li>
                     <li><NavLink to='/signin'>Login</NavLink></li>
                     <li><NavLink to="/register">SignUp</NavLink></li>
                 </ul>

@@ -8,7 +8,7 @@ import Error from '../Pages/Error'
 import CheckOutPage from "../Pages/CheckOutPage";
 import UserDashboard from "../Dashboard/UserDashboard/UserDashboard";
 const { createBrowserRouter } = require("react-router-dom");
-
+let rooleChecker = 'admin';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -38,8 +38,13 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path : '/user/dashboard',
-        element : <UserDashboard />
+        path : `/${rooleChecker}/dashboard`,
+        element : <UserDashboard />,
+        children : [
+            {
+                path : ''
+            }
+        ]
     }
 ])
 
