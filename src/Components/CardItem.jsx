@@ -7,7 +7,7 @@ const CardItem = () => {
     return (
         <>
             <div className="fixed top-[5%] right-0 p-[10px] z-50">
-                <Link to='product/checkout'>
+                <Link state={cardItem} to='product/checkout'>
                     <div className="text-3xl bg-white p-[10px] border border-green-400 z-50 rounded-lg">
                         <FaShoppingCart />
                         <p className="text-[16px] bg-green-400 h-[20px] w-[20px] flex items-center justify-center rounded-full text-white font-[600] absolute top-0 right-0">{cardItem.length}</p>

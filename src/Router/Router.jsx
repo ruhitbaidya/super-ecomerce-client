@@ -6,6 +6,7 @@ import Layout from "../Pages/Lyout";
 import CategoryAll from "../Pages/CategoryAll";
 import Error from '../Pages/Error'
 import CheckOutPage from "../Pages/CheckOutPage";
+import UserDashboard from "../Dashboard/UserDashboard/UserDashboard";
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
                 element : <CheckOutPage />
             }
         ]
+    },
+    {
+        path : '/user/dashboard',
+        element : <UserDashboard />
     }
 ])
 
