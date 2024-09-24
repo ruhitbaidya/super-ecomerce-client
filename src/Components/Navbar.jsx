@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex-1">
           <div className='relative'>
-          <button className="px-[20px] text-3xl text-white"><FaCartShopping /></button>
+          <button className="px-[20px] text-3xl text-white hidden"><FaCartShopping /></button>
           </div>
         </div>
       </div>

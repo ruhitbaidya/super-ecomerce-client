@@ -5,6 +5,7 @@ import SignIn from "../Pages/SignIn";
 import Layout from "../Pages/Lyout";
 import CategoryAll from "../Pages/CategoryAll";
 import Error from '../Pages/Error'
+import CheckOutPage from "../Pages/CheckOutPage";
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path : 'product/category',
                 element : <CategoryAll />
+            },
+            {
+                path : 'product/checkout',
+                element : <CheckOutPage />
             }
         ]
     }

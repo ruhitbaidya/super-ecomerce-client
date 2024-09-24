@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import product from '../NeedFile/product.json'
 import { FaStar } from "react-icons/fa";
+import { AuthUser } from '../UserAuth/UserAuth';
 const Product = () => {
-    console.log(product)
+    const {cardItem, setCardItem} = useContext(AuthUser);
+    console.log(cardItem)
   return (
     <div>
       <div>
@@ -24,7 +26,7 @@ const Product = () => {
                                 <p className='flex items-center gap-[10px]'><FaStar className='text-yellow-500' />({item.rating})</p>
                             </div>
                             <div className='text-right mt-[10px]'>
-                                <button className='border border-green-400 px-[25px] py-[8px] rounded-lg'>Buy Now</button>
+                                <button onClick={()=> setCardItem([...cardItem, item])} className='border border-green-400 px-[25px] py-[8px] rounded-lg'>Buy Now</button>
                             </div>
                         </div>
                     })
