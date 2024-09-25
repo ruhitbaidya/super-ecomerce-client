@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
@@ -30,7 +31,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-white">SP - Commerce</a>
+          <Link to='/' className="btn btn-ghost text-xl text-white">SP - Commerce</Link>
         </div>
         <div className="navbar-center hidden lg:flex flex-1">
           

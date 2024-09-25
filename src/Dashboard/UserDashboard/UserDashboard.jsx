@@ -16,7 +16,7 @@ const UserDashboard = () => {
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
       <header className="bg-blue-900 text-white p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">My Dashboard</h1>
+        <h1 className="text-2xl font-bold"><Link to='/'>My Dashboard</Link></h1>
         {/* Hamburger icon for mobile */}
         <button
           className="text-white md:hidden"
