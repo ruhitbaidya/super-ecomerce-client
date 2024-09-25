@@ -10,7 +10,7 @@ const UserDashboard = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  let roole = 'admin';
+  let roole = 'seller';
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -30,29 +30,30 @@ const UserDashboard = () => {
       <div className="flex">
         {/* Sidebar */}
         <aside
-          className={`${
-            isSidebarOpen ? "block" : "hidden"
-          } md:block w-full md:w-64 bg-blue-900 text-white h-auto md:h-screen p-5 fixed md:relative z-10 transition-transform transform ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } md:translate-x-0`}
+          className={`${isSidebarOpen ? "block" : "hidden"
+            } md:block w-full md:w-64 bg-blue-900 text-white h-auto md:h-screen p-5 fixed md:relative z-10 transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            } md:translate-x-0`}
         >
           <nav>
             <ul>
-              <li className="mb-4">
-                <Link to="/" className="block p-3 rounded hover:bg-blue-700">
-                  Home
-                </Link>
-              </li>
+
               {
                 roole === 'admin' ? <>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/procutControl'>Control Product</Link></li>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700"  to='/dashboard/admin/usercontrol'>Role Checker</Link></li>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/productAproved'>Product Aproved</Link></li>
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/procutControl'>Control Product</Link></li>
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/usercontrol'>Role Checker</Link></li>
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/productAproved'>Product Aproved</Link></li>
                 </> : <></>
               }
               {
                 roole === 'user' ? <>
-                
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/user/byeHistory'>View history</Link></li>
+
+                </> : <></>
+              }
+              {
+                roole === 'seller' ? <>
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/seller/controlproduct'>Control Product</Link></li>
+                  <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/seller/CreateProcut'>Create Product</Link></li>
                 </> : <></>
               }
             </ul>
@@ -69,7 +70,7 @@ const UserDashboard = () => {
             </button>
           </header>
 
-              <Outlet></Outlet>
+          <Outlet></Outlet>
         </main>
       </div>
     </div>
