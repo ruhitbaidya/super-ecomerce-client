@@ -10,7 +10,7 @@ const UserDashboard = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  let roole = 'seller';
+  let roole = 'admin';
 
   return (
     <div className="min-h-screen bg-gray-100">

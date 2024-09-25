@@ -2,9 +2,42 @@ import React from 'react'
 
 const RoolChecker = () => {
   return (
-    <div>
-      
+    <div className='w-full'>
+    <table className='table'>
+      <thead>
+        <tr>
+          <th>Product Image</th>
+          <th>Product Name</th>
+          <th>Product Seller</th>
+          <th>Product Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="" alt="" /></td>
+          <td>Orange</td>
+          <td>rhitbaidya@gmail.com</td>
+          <td>125</td>
+          <th>
+          <select className="select select-bordered w-full max-w-xs">
+                <option disabled selected>Who shot first?</option>
+                <option>Seller</option>
+                <option>Admin</option>
+              </select>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+    <div className='text-center'>
+      <div className="join">
+        <button className="join-item btn">1</button>
+        <button className="join-item btn btn-active">2</button>
+        <button className="join-item btn">3</button>
+        <button className="join-item btn">4</button>
+      </div>
     </div>
+  </div>
   )
 }
 
