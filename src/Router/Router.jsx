@@ -7,6 +7,12 @@ import CategoryAll from "../Pages/CategoryAll";
 import Error from '../Pages/Error'
 import CheckOutPage from "../Pages/CheckOutPage";
 import UserDashboard from "../Dashboard/UserDashboard/UserDashboard";
+import ControlAllProduct from "../Dashboard/DashboardCom/AdminComponent/ControlAllProduct";
+import ProductAprove from "../Dashboard/DashboardCom/AdminComponent/ProductAprove";
+import RoolChecker from "../Dashboard/DashboardCom/AdminComponent/RoolChecker";
+import ControlProduct from "../Dashboard/DashboardCom/SellerComponent/ControlProduct";
+import CreateProduct from "../Dashboard/DashboardCom/SellerComponent/CreateProduct";
+import Byehistory from "../Dashboard/DashboardCom/UserComponent/Byehistory";
 const { createBrowserRouter } = require("react-router-dom");
 let rooleChecker = 'admin';
 const router = createBrowserRouter([
@@ -38,11 +44,32 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path : `/${rooleChecker}/dashboard`,
+        path : `/dashboard`,
         element : <UserDashboard />,
         children : [
             {
-                path : ''
+                path : `admin/procutControl`,
+                element : <ControlAllProduct />
+            },
+            {
+                path : `admin/productAproved`,
+                element : <ProductAprove />
+            },
+            {
+                path : `admin/usercontrol`,
+                element : <RoolChecker />
+            },
+            {
+                path : 'seller/controlproduct',
+                element : <ControlProduct />
+            },
+            {
+                path : 'seller/CreateProcut',
+                element : <CreateProduct />
+            },
+            {
+                path : 'user/byeHistory',
+                element : <Byehistory />
             }
         ]
     }

@@ -1,7 +1,7 @@
 // UserDashboard
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Icons for the hamburger menu
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const UserDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -45,9 +45,9 @@ const UserDashboard = () => {
               </li>
               {
                 roole === 'admin' ? <>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/admin/controlallproduct'>Control Product</Link></li>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700"  to='/admin/roolecheker'>Role Checker</Link></li>
-                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/admin/productaprove'>Product Aproved</Link></li>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/procutControl'>Control Product</Link></li>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700"  to='/dashboard/admin/usercontrol'>Role Checker</Link></li>
+                    <li className="mb-4"><Link className="block p-3 rounded hover:bg-blue-700" to='/dashboard/admin/productAproved'>Product Aproved</Link></li>
                 </> : <></>
               }
               {
@@ -69,29 +69,7 @@ const UserDashboard = () => {
             </button>
           </header>
 
-          {/* Dashboard Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 w-full">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Total Sales</h3>
-              <p className="text-3xl font-bold">$15,200</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">New Users</h3>
-              <p className="text-3xl font-bold">320</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Total Orders</h3>
-              <p className="text-3xl font-bold">1,200</p>
-            </div>
-          </div>
-
-          {/* Sales Analytics Section */}
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Sales Analytics</h3>
-            <div className="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-              <p className="text-gray-500">[Chart Placeholder]</p>
-            </div>
-          </div>
+              <Outlet></Outlet>
         </main>
       </div>
     </div>
