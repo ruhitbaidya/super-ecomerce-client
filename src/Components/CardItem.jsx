@@ -6,7 +6,7 @@ const CardItem = () => {
     const { cardItem } = useContext(AuthUser);
     return (
         <>
-            <div className="fixed top-[5%] right-0 p-[10px] z-50">
+            <div className={`fixed top-[7%] right-0 p-[10px] z-50 ${cardItem.length <= 0 ? 'hidden' : ''}`}>
                 <Link state={cardItem} to='product/checkout'>
                     <div className="text-3xl bg-white p-[10px] border border-green-400 z-50 rounded-lg">
                         <FaShoppingCart />

@@ -1,8 +1,10 @@
-import React from 'react'
-import { FaCartShopping } from "react-icons/fa6";
+import  { useContext } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { AuthUser } from '../UserAuth/UserAuth';
 import { FaSearch } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Navbar = () => {
+  const { cardItem } = useContext(AuthUser);
   return (
     <div>
       <div className="navbar">
@@ -34,14 +36,18 @@ const Navbar = () => {
           <Link to='/' className="btn btn-ghost text-xl text-white">SP - Commerce</Link>
         </div>
         <div className="navbar-center hidden lg:flex flex-1">
-          
-              <input className='border p-[10px] w-full' type="text" placeholder='Search Product' />
-              <button className='border py-[14px] px-[15px] text-white'><FaSearch /></button>
-           
+
+          <input className='border p-[10px] w-full' type="text" placeholder='Search Product' />
+          <button className='border py-[14px] px-[15px] text-white'><FaSearch /></button>
         </div>
         <div className="navbar-end flex-1">
           <div className='relative'>
-          <button className="px-[20px] text-3xl text-white hidden"><FaCartShopping /></button>
+            <Link state={cardItem} to='product/checkout' className={`${cardItem.length <= 0 ? '' : 'hidden'}`}>
+              <div className="text-3xl bg-green-400 p-[10px] border border-green-400 z-50 rounded-lg">
+                <FaShoppingCart className='text-white' />
+                <p className="text-[16px] bg-black h-[20px] w-[20px] flex items-center justify-center rounded-full text-white font-[600] absolute top-0 right-0">{cardItem.length}</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
