@@ -12,7 +12,7 @@ const SignIn = () => {
 
     const onSubmit = (data) => {
       console.log(data)
-      axios.post('http://localhost:5000/login', data)
+      axios.post('http://localhost:7000/auth/login', data)
       .then((res)=> console.log(res))
       .catch((err)=> console.log(err))
     }
