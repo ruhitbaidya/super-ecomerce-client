@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from "react-hook-form"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const Regtister = () => {
+    const navigate = useNavigate();
+    const token = localStorage.getItem('token');
+    console.log(token)
+    
+    useEffect(()=>{
+        if(token){
+            navigate('/verifyEmail')
+        }
+    }, [])
     const {
         register,
         handleSubmit,
@@ -10,9 +20,16 @@ const Regtister = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        axios.post('http://localhost:5000/registerUser', data)
-        .then((res)=> console.log(res.data))
-        .then((err)=> console.log(err))
+        axios.post('http://localhost:7000/auth/register', data)
+        .then((res)=> {
+            console.log(res.data)
+            if(res.data.message){
+                localStorage.setItem('token', res.data.token)
+                navigate('/verifyEmail')
+            }
+            
+        })
+        .catch((err)=> console.log(err))
     }
     return (
         <>
@@ -31,7 +48,7 @@ const Regtister = () => {
                                 <div className='w-[50%]'>
                                     <label htmlFor="gender" className='w-full'>Gender *</label>
                                     <select  {...register("gender", { required: true })} className="select select-bordered w-full">
-                                        <option disabled selected value="">Gender</option>
+                                        <option disabled>Gender</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                         <option value="others">Others</option>

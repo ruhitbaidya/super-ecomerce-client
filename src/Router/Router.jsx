@@ -13,6 +13,7 @@ import RoolChecker from "../Dashboard/DashboardCom/AdminComponent/RoolChecker";
 import ControlProduct from "../Dashboard/DashboardCom/SellerComponent/ControlProduct";
 import CreateProduct from "../Dashboard/DashboardCom/SellerComponent/CreateProduct";
 import Byehistory from "../Dashboard/DashboardCom/UserComponent/Byehistory";
+import VerifyPage from "../Pages/VerifyPage";
 const { createBrowserRouter } = require("react-router-dom");
 let rooleChecker = 'admin';
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path : 'product/checkout',
                 element : <CheckOutPage />
+            },
+            {
+                path : 'verifyEmail',
+                element : <VerifyPage />
             }
         ]
     },
