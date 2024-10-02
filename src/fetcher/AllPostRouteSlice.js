@@ -1,10 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const allPostSend = createAsyncThunk('allPost/all', async(url)=>{
-    const res = await axios.post(url);
+ const allPostSend = ()=> {
+    return createAsyncThunk('allPost/all', async()=>{
+    const res = await axios.post(url, data);
     return res.data
-})
+})}
+
 
 const allPostSlice = createSlice({
     name : 'allPost',
