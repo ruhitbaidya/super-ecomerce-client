@@ -1,9 +1,17 @@
 
 import axios from "axios"
+import { useEffect } from "react";
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
 
 const SignIn = () => {
-
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token');
+  useEffect(()=>{
+    if(token){
+      navigate('/')
+    }
+  }, [])
     const {
         register,
         handleSubmit,
@@ -13,7 +21,11 @@ const SignIn = () => {
     const onSubmit = (data) => {
       console.log(data)
       axios.post('http://localhost:7000/auth/login', data)
-      .then((res)=> console.log(res))
+      .then((res)=> {
+        console.log(res.data)
+        localStorage.setItem("token", res?.data?.token)
+        navigate('/')
+      })
       .catch((err)=> console.log(err))
     }
   return (

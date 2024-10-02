@@ -20,7 +20,7 @@ const Regtister = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        axios.post('http://localhost:7000/auth/register', data)
+        axios.post('http://localhost:7000/auth/register', {...data, role: 'user'})
         .then((res)=> {
             console.log(res.data)
             if(res.data.message){
