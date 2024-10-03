@@ -14,8 +14,11 @@ import ControlProduct from "../Dashboard/DashboardCom/SellerComponent/ControlPro
 import CreateProduct from "../Dashboard/DashboardCom/SellerComponent/CreateProduct";
 import Byehistory from "../Dashboard/DashboardCom/UserComponent/Byehistory";
 import VerifyPage from "../Pages/VerifyPage";
+
+
+
 const { createBrowserRouter } = require("react-router-dom");
-let rooleChecker = 'admin';
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "register",
-                element: <Regtister></Regtister>
+                element:<Regtister></Regtister>
             },
             {
                 path: "signin",

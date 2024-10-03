@@ -1,17 +1,21 @@
 
 import axios from "axios"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 
 const SignIn = () => {
+  const [loading, setLoading] = useState(true)
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
   useEffect(()=>{
     if(token){
+      setLoading(false)
       navigate('/')
+    }else{
+      setLoading(false)
     }
-  }, [])
+  }, [token, navigate])
     const {
         register,
         handleSubmit,
@@ -30,7 +34,9 @@ const SignIn = () => {
     }
   return (
     <>
-      <div className='container mx-auto px-[10px]'>
+      {
+        loading ? <><span className="loading loading-spinner loading-lg"></span></> : <>
+        <div className='container mx-auto px-[10px]'>
         <div className=' flex justify-center items-center'>
             <div className='p-[40px] border border-green-400 w-[60%] rounded-lg'>
                 <h2 className='text-2xl font-[600] text-center'>Login Here</h2>
@@ -39,7 +45,7 @@ const SignIn = () => {
             <form onSubmit={handleSubmit(onSubmit)} className='mt-[20px]'>
                 <div>
                     <label htmlFor="email">Enter Your Email</label>
-                    <input {...register("email", { required: true })} className='w-full border focus:outline-none p-[10px] rounded-lg' type="email" placeholder='Enter Your Email' />
+                    <input {...register("email", { required: true })} className="w-full border focus:outline-none p-[10px] rounded-lg" type="email" placeholder='Enter Your Email' />
                     {errors.email && <span className='text-red-500'>This field is required</span>}
                 </div>
                 <div>
@@ -53,7 +59,8 @@ const SignIn = () => {
             </form>
             </div>
         </div>
-      </div>
+      </div></>
+      }
     </>
   )
 }

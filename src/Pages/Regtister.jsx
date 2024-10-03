@@ -1,15 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from "react-hook-form"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 const Regtister = () => {
+    const [loading, setLoading] = useState(true)
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
     console.log(token)
     
     useEffect(()=>{
         if(token){
+            setLoading(false)
             navigate('/verifyEmail')
+        }else{
+            setLoading(false)
         }
     }, [])
     const {
@@ -33,7 +37,9 @@ const Regtister = () => {
     }
     return (
         <>
-            <div className='container mx-auto px-[10px]'>
+            {
+                loading ? <><span className="loading loading-spinner loading-lg"></span></> : <>
+                <div className='container mx-auto px-[10px]'>
                 <div className='w-[80%] mx-auto mt-[20px]'>
                     <div className='border border-green-400 p-[30px] rounded-lg'>
                         <h2 className='text-3xl text-center font-[700]'>Register</h2>
@@ -108,6 +114,8 @@ const Regtister = () => {
                     </div>
                 </div>
             </div>
+                </>
+            }
         </>
     )
 }
