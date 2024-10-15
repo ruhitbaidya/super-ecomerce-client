@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export const fetchGetData = createAsyncThunk('getData/all', async(url)=>{
-    const res = await axios.get(url);
+    const res = await axios.get('http://localhost:7000/auth/all-user');
     return res.data
  })
 

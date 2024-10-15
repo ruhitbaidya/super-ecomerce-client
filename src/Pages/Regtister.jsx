@@ -6,7 +6,7 @@ const Regtister = () => {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
-    console.log(token)
+
     
     useEffect(()=>{
         if(token){
@@ -15,7 +15,7 @@ const Regtister = () => {
         }else{
             setLoading(false)
         }
-    }, [])
+    }, [setLoading, navigate])
     const {
         register,
         handleSubmit,
@@ -28,6 +28,7 @@ const Regtister = () => {
         .then((res)=> {
             console.log(res.data)
             if(res.data.message){
+                setLoading(false)
                 localStorage.setItem('token', res.data.token)
                 navigate('/verifyEmail')
             }
