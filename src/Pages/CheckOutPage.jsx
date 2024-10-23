@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { IoClose } from "react-icons/io5";
 import { AuthUser } from '../UserAuth/UserAuth';
-
+import axios from "axios"
 const CheckOutPage = () => {
   const {cardItem, setCardItem} = useContext(AuthUser);
   const totalPrice = cardItem.reduce((total, item)=> total + item.price, 0)
@@ -10,7 +10,12 @@ const CheckOutPage = () => {
     setCardItem(delteProduct)
   }
   const handelPayment = ()=>{
-    alert('Successfully payment')
+    axios.post('http://localhost:7000/auth/create_payment', {name: "Ruhit Baidya", money: 200})
+    .then((res)=> {
+      // console.log(res.data)
+      window.location.replace(res.data)
+    })
+    .catch((err)=> console.log(err.message))
   }
   return (
     <div className='container mx-auto p-[10px]'>

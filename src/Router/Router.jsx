@@ -14,6 +14,7 @@ import ControlProduct from "../Dashboard/DashboardCom/SellerComponent/ControlPro
 import CreateProduct from "../Dashboard/DashboardCom/SellerComponent/CreateProduct";
 import Byehistory from "../Dashboard/DashboardCom/UserComponent/Byehistory";
 import VerifyPage from "../Pages/VerifyPage";
+import PaymentSuccess from "../Pages/PaymentSuccess";
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path : 'verifyEmail',
                 element : <VerifyPage />
+            },
+            {
+                path : 'payment-success',
+                element : <PaymentSuccess />
             }
         ]
     },
